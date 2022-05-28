@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="gallery.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="bg">
+	<div class="topnav" id="myTopnav">
+  <a href="home.html" ><strong>HOME</strong></a>
+  <a href="about.html" ><strong>ABOUT</strong></a>
+  <a href="gallery.html" class="active"><strong>GALLERY</strong></a>
+  <a href="register.html"><strong>REGISTER</strong></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div class="charac container">
+		
+  <img class="mySlides" src="images/kyle.png" style="width:100%" alt = "char1">
+  <img class="mySlides" src="images/char2.png" style="width:100%" alt = "char2">
+  <img class="mySlides" src="images/char3.png" style="width:100%" alt = "char3">
+  <img class="mySlides" src="images/char4.png" style="width:100%" alt = "char4">
+  <img class="mySlides" src="images/char5.png" style="width:100%" alt = "char5">
+  <img class="mySlides" src="images/char6.png" style="width:100%" alt = "char6">
+  <img class="mySlides" src="images/char7.png" style="width:100%" alt = "char7">
+  <img class="mySlides" src="images/char8.png" style="width:100%" alt = "char8">
+  <img class="mySlides" src="images/char9.png" style="width:100%" alt = "char9">
+  
+
+  <button class="button black left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="button black right" onclick="plusDivs(1)">&#10095;</button>
+</div><div class="t1"><h1>Character Selection</h1></div><br><br><br><br><br><br>
+	<div class="footer"><h6>Title: Grand Chase&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Genre:Real Time Strategy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price: Free To Play</h6><img src="images/kog-logo.png" width="50"><h6>Copyright KOG Co, Ltd, All right reserved</h6></div>
+</div>
+	<script>
+		function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+	var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+	
+	</script>
+
+</body>
+	
+</html>
